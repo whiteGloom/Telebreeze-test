@@ -1,0 +1,41 @@
+include ../../blocks/content/content
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title Test
+        link(rel="stylesheet" type="text/css" href="/static/styles/styles.css")
+        script(src="./scripts/index.js")
+    body
+        +content({
+            menuData: {
+                title: "Blocks",
+                groups: [
+                    {
+                        title: 'Group name',
+                        items: [
+                            {image: {alt: 'someImage', src: './static/images/some.jpeg'}, href: '#'},
+                            {image: {alt: 'someImage', src: './static/images/some.jpeg'}, href: '#'},
+                            {image: {alt: 'someImage', src: './static/images/some.jpeg'}, href: '#'},
+                        ],
+                    },
+                    {
+                        title: 'Group name',
+                        items: [
+                            {image: {alt: 'someImage', src: './static/images/some.jpeg'}, size: 'box', href: '#'},
+                            {image: {alt: 'someImage', src: './static/images/some.jpeg'}, size: 'box', href: '#'},
+                            {image: {alt: 'someImage', src: './static/images/some.jpeg'}, size: 'box', href: '#'},
+                        ],
+                    },
+                    {
+                        title: 'Group name',
+                        items: [
+                            {image: {alt: 'someImage', src: './static/images/some.jpeg'}, href: '#'},
+                            {image: {alt: 'someImage', src: './static/images/some.jpeg'}, href: '#'},
+                            {image: {alt: 'someImage', src: './static/images/some.jpeg'}, href: '#'},
+                        ],
+                    },
+                ],
+            },
+        })

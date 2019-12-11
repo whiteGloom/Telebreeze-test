@@ -1,0 +1,7 @@
+include ../menu/menu
+
+mixin content(options)
+    -
+        const { menuData = {} } = options;
+    .content
+        +menu(menuData)

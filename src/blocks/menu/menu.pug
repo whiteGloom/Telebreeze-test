@@ -1,0 +1,14 @@
+mixin menu(options = {})
+    -
+        const { groups, title = "" } = options;
+    .menu.menu_state_hidden
+        .menu__header= title
+        .menu__body
+            for group in groups
+                .menu__group
+                    .menu__groupTitle= group.title
+                    for item in group.items
+                        - const { size = 'normal' } = item;
+                        .menu__element(class="" + ("menu__element_size_" + size))= item.title
+                            a.menu__elementLink(href=item.href rel="noopener nooferer" target="_blank")
+                                img.menu__elementImage(src=item.image.src alt=item.image.alt)
