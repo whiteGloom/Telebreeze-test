@@ -1,0 +1,43 @@
+{
+  "name": "telebreeze-test",
+  "version": "0.0.2",
+  "description": "Just a test",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build-live": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whiteGloom/Telebreeze-test.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "whiteGloom <karabin.m@yandex.ru> (https://github.com/whiteGloom)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whiteGloom/Telebreeze-test/issues"
+  },
+  "homepage": "https://github.com/whiteGloom/Telebreeze-test#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^5.0.0",
+    "remove-service-outputs-plugin": "github:whiteGloom/remove-service-outputs-plugin#v0.1.4",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
