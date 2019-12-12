@@ -1,17 +1,27 @@
-function init() {
-  const menu = document.getElementById('menu');
-  const closeButton = menu.getElementsByClassName('menu__close-button')[0];
-  function hideMenu() {
-    menu.classList.remove('menu_state_open');
-    menu.classList.add('menu_state_hidden');
+class Menu {
+  constructor(visibility = false, openButton) {
+    this.menu = document.getElementsByClassName('menu')[0];
+    this.closeButton = this.menu.getElementsByClassName('menu__close-button')[0];
+    this.openButton = openButton;
+    this.visibility = visibility;
+
+    this._addListeners();
   }
 
-  closeButton.addEventListener('click', hideMenu);
+  _toggleVisibility() {
+    this.visibility = !this.visibility;
+    this._applyVisibility();
+  }
 
-  setTimeout(() => {
-    menu.classList.remove('menu_state_hidden');
-    menu.classList.add('menu_state_open');
-  }, 1500);
-};
+  _applyVisibility(visibility) {
+    this.menu.classList[this.visibility ? 'remove' : 'add']('menu_state_hidden');
+    this.menu.classList[this.visibility ? 'add' : 'remove']('menu_state_open');
+  }
 
-document.addEventListener('DOMContentLoaded', init);
+  _addListeners() {
+    this.openButton.addEventListener('click', this._toggleVisibility.bind(this));
+    this.closeButton.addEventListener('click', this._toggleVisibility.bind(this));
+  }
+}
+
+export default Menu;

@@ -1,14 +1,48 @@
 .header {
   height: 4rem;
   width: 100%;
-  background-color: white;
   display: flex;
   justify-content: center;
+
+  &__navigation {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
 
   &__button {
     height: 100%;
     width: 4rem;
     display: block;
     padding: 0;
+    cursor: pointer;
+
+    &_state {
+      &_active {
+        background-color: #f9f9f9;
+      }
+      &_inactive {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      background-color: #e3e3e3;
+    }
+
+    &_type {
+      &_tablet {
+        background-image: url('../images/tabletIcon.png');
+      }
+      &_pc {
+        background-image: url('../images/pcIcon.png');
+      }
+      &_phone {
+        background-image: url('../images/phoneIcon.png');
+      }
+      &_menu {
+        background-image: url('../images/menuIcon.png');
+      }
+    }
   }
 }
