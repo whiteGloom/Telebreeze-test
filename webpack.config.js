@@ -8,12 +8,12 @@ const merge = require('webpack-merge');
 
 const workFolder = process.cwd();
 
-function config() {
-  return merge([
+async function config() {
+  const data = merge([
     babelConfig(),
     lessConfig({ path: './static/styles/styles.css' }),
     staticsConfig(),
-    pugConfig({ workFolder }),
+    await pugConfig({ workFolder }),
     devserverConfig(),
     {
       mode: 'development',
@@ -35,5 +35,7 @@ function config() {
       },
     },
   ]);
+  return data;
 }
+
 module.exports = config;

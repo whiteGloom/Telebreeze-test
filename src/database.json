@@ -1,38 +1,36 @@
 {
-  "data": {
-    "mainData": {
-      "majorTitle": "Welcome to our site!",
-      "minorTitle": "We are always glad to see you!",
-      "imageSrc": "./static/images/some3.jpg",
-    },
-    "menuData": {
-      "title": "Blocks",
-      "groups": [
-        {
-          "title": "Кумамон",
-          "items": [
-            {"image": {"alt": "someImage", "src": "./static/images/some.jpeg"}, "href": "#"},
-            {"image": {"alt": "someImage", "src": "./static/images/some.jpeg"}, "href": "#"},
-            {"image": {"alt": "someImage", "src": "./static/images/some.jpeg"}, "href": "#"},
-          ],
-        },
-        {
-          "title": "Group name",
-          "items": [
-            {"image": {"alt": "someImage", "src": "./static/images/some1.jpg"}, "size": "box", "href": "#"},
-            {"image": {"alt": "someImage", "src": "./static/images/some1.jpg"}, "size": "box", "href": "#"},
-            {"image": {"alt": "someImage", "src": "./static/images/some1.jpg"}, "size": "box", "href": "#"},
-          ],
-        },
-        {
-          "title": "Group name",
-          "items": [
-            {"image": {"alt": "someImage", "src": "./static/images/some2.jpg"}, "href": "#"},
-            {"image": {"alt": "someImage", "src": "./static/images/some2.jpg"}, "href": "#"},
-            {"image": {"alt": "someImage", "src": "./static/images/some2.jpg"}, "href": "#"},
-          ],
-        },
-      ],
-    },
+  "mainData": {
+    "majorTitle": "Welcome to our site!",
+    "minorTitle": "We are always glad to see you!",
+    "imageSrc": "./static/images/some3.jpg"
   },
+  "menuData": {
+    "title": "Blocks",
+    "groups": [
+      {
+        "title": "Til Satan ære",
+        "items": [
+          {"image": {"alt": "someImage", "src": "./static/images/some.jpeg"}, "href": "#"},
+          {"image": {"alt": "someImage", "src": "./static/images/some.jpeg"}, "href": "#"},
+          {"image": {"alt": "someImage", "src": "./static/images/some.jpeg"}, "href": "#"}
+        ]
+      },
+      {
+        "title": "Zur Ehre des Satans",
+        "items": [
+          {"image": {"alt": "someImage", "src": "./static/images/some1.jpg"}, "size": "box", "href": "#"},
+          {"image": {"alt": "someImage", "src": "./static/images/some1.jpg"}, "size": "box", "href": "#"},
+          {"image": {"alt": "someImage", "src": "./static/images/some1.jpg"}, "size": "box", "href": "#"}
+        ]
+      },
+      {
+        "title": "Satanas in gloria est scriptor",
+        "items": [
+          {"image": {"alt": "someImage", "src": "./static/images/some2.jpg"}, "href": "#"},
+          {"image": {"alt": "someImage", "src": "./static/images/some2.jpg"}, "href": "#"},
+          {"image": {"alt": "someImage", "src": "./static/images/some2.jpg"}, "href": "#"}
+        ]
+      }
+    ]
+  }
 }
