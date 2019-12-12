@@ -5,16 +5,16 @@
   width: 20rem;
   right: 0;
   flex-direction: column;
-  transition: transform .4s;
+  transition: margin-right .4s;
   overflow-y: scroll;
-  z-index: 10;
+  z-index: 1000;
 
   &_state {
     &_open {
-      transform: translateX(0);
+      margin-right: 0rem;
     }
     &_hidden {
-      transform: translateX(20rem);
+      margin-right: -20rem;
     }
   }
 

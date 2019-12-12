@@ -1,6 +1,6 @@
 {
   "name": "telebreeze-test",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Just a test",
   "main": "index.js",
   "scripts": {

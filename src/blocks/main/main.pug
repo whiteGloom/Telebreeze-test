@@ -1,6 +1,6 @@
-mixin main(options)
+mixin main(options = {})
     -
-        const { majorTitle = '', minorTitle = '', imageSrc='', imageAlt='alt' } = options;
+        const { majorTitle = '', minorTitle = '', imageSrc = '', imageAlt = 'alt' } = options;
     section.main
         .main__body
             .main__imageOuter

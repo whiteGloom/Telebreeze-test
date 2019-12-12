@@ -2,9 +2,8 @@ include ../menu/menu
 include ../main/main
 include ../header/header
 
-mixin content(options)
-    -
-        const { mainData = {}, menuData = {} } = options;
+mixin content(options = {})
+    - const { mainData = {}, menuData = {} } = options;
     .content
         +menu(menuData)
         .content__header
