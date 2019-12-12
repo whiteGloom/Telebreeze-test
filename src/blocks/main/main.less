@@ -1,0 +1,48 @@
+.main {
+  height: 100%;
+  background: rgb(81,70,88);
+  background: linear-gradient(156deg, rgba(81,70,88,1) 1%, rgba(7,18,22,1) 100%);
+  padding-top: .1px;
+
+  &__body {
+    width: 80%;
+    margin: 8rem auto 0;
+    display: flex;
+    justify-content: start;
+  }
+
+  &__imageOuter {
+    position: relative;
+    width: 10rem;
+    min-height: 20rem;
+    margin-right: 2rem;
+    flex-shrink: 0;
+    border-radius: 5px;
+  }
+
+  &__image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  &__titles {
+    flex-shrink: 1;
+  }
+
+  &__majorTitle {
+    font-size: 5rem;
+    text-decoration: underline;
+    color: white;
+  }
+
+  &__minorTitle {
+    margin-top: 2rem;
+    font-size: 2.75rem;
+    color: white;
+    border-left: .2rem solid white;
+    padding-left: .5rem;
+  }
+}

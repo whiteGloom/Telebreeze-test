@@ -1,7 +1,14 @@
 include ../menu/menu
+include ../main/main
+include ../header/header
 
 mixin content(options)
     -
-        const { menuData = {} } = options;
+        const { mainData = {}, menuData = {} } = options;
     .content
         +menu(menuData)
+        .content__header
+            +header
+        main.content__body
+            .content__body-element
+                +main(mainData)
