@@ -1,4 +1,4 @@
-import Smoothscroll from '../../scripts/Smoothscroll';
+import SmoothScroll from '../../scripts/SmoothScroll';
 
 class Menu {
   constructor(visibility = false, openButton) {
@@ -27,7 +27,7 @@ class Menu {
   _init() {
     [this.menu] = document.getElementsByClassName('menu');
     [this.closeButton] = this.menu.getElementsByClassName('menu__close-button');
-    const smoothscroll = new Smoothscroll(this.menu);
+    const smoothScroll = new SmoothScroll(this.menu);
   }
 
   _addListeners() {

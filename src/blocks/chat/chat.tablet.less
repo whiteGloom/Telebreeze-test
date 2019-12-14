@@ -1,0 +1,57 @@
+.chat {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+
+  &__control-button {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    background-color: #ff0048;
+    background-image: url('../images/chat-icon.png');
+    background-position: center;
+    border-radius: 50%;
+    transition: transform .3s;
+    z-index: 101;
+
+    &_state {
+      &_open {
+        transform: rotate(45deg);
+      }
+      &_closed {
+        transform: rotate(0deg);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+
+  &__body {
+    position: absolute;
+    width: 15rem;
+    height: 20rem;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: #35434e;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    z-index: 100;
+    transition: transform .3s;
+    transform-origin: 0 20rem;
+
+    &_state {
+      &_open {
+        transform: scale(1);
+      }
+      &_closed {
+        transform: scale(0);
+      }
+    }
+  }
+}

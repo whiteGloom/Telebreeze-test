@@ -1,0 +1,115 @@
+.menu {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 20rem;
+  right: 0;
+  flex-direction: column;
+  transition: margin-right .4s;
+  overflow-y: scroll;
+  z-index: 100;
+
+  &_state {
+    &_open {
+      margin-right: 0rem;
+      box-shadow: 0 0 10px black
+    }
+    &_hidden {
+      margin-right: -20rem;
+    }
+  }
+
+  &__header {
+    flex-grow: 0;
+    height: 4rem;
+    background-color: #252E35;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header-title {
+    color: white;
+    font-size: 2rem;
+  }
+
+  &__close-button {
+    width: 2rem;
+    height: 2rem;
+    background-image: url('../images/menu-close-icon.png');
+    background-size: cover;
+    transition: transform .3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__body {
+    flex-grow: 1;
+    background-color: #35434E;
+  }
+
+  &__group {
+    margin-top: 1.5rem;
+
+    &:first-child {
+      margin-top: 1rem;
+    }
+
+    &:last-child {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__group-title {
+    color: white;
+    font-size: 1.5rem;
+    width: 85%;
+    margin: auto;
+    text-decoration: underline;
+  }
+
+  &__element {
+    width: 85%;
+    margin: .7rem auto 0;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: transform .3s;
+
+    &_size {
+      &_normal {
+        padding-bottom: 47.5%;
+      }
+      &_box {
+        padding-bottom: 85%;
+      }
+    }
+
+    & ~ & {
+      margin-top: 1.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-sizing: border-box;
+    }
+  }
+
+  &__element-link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+  }
+
+  &__element-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}

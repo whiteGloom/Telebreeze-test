@@ -5,5 +5,3 @@ function importAll(r) {
 
 importAll(require.context('./blocks/', true, /\.(jpe?g|gif|png|svg|ico)/)); // images
 importAll(require.context('./static/images/', true, /\.(jpe?g|gif|png|svg|ico)/)); // images
-importAll(require.context('./static/styles/', true, /\.(less|css)/)); // styles
-importAll(require.context('./blocks/', true, /\.(less|css)/)); // styles

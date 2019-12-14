@@ -11,7 +11,7 @@ const workFolder = process.cwd();
 async function config() {
   const data = merge([
     babelConfig(),
-    lessConfig({ path: './static/styles/styles.css' }),
+    lessConfig({ path: './static/styles/[name].css' }),
     staticsConfig(),
     await pugConfig({ workFolder }),
     devserverConfig(),
@@ -19,6 +19,9 @@ async function config() {
       mode: 'development',
       entry: {
         statics: `${workFolder}/src/statics.js`,
+        stylesMobile: `${workFolder}/src/staticsMobile.js`,
+        stylesTablet: `${workFolder}/src/staticsTablet.js`,
+        stylesNormal: `${workFolder}/src/staticsNormal.js`,
         index: `${workFolder}/src/views/index/index.js`,
       },
       output: {
