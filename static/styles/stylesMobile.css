@@ -1,7 +1,7 @@
 html {
   font-size: 12pt;
 }
-@media screen and (max-width: 375) {
+@media screen and (max-width: 375) and (orientation: portrait) {
   html {
     font-size: 11pt;
   }
@@ -27,8 +27,8 @@ p {
 
 .chat {
   position: fixed;
-  left: 3rem;
-  bottom: 3rem;
+  left: 1.5rem;
+  bottom: 1.5rem;
   z-index: 100;
 }
 .chat__control-button {
@@ -49,12 +49,18 @@ p {
 .chat__control-button_state_closed {
   transform: rotate(0deg);
 }
+@media (orientation: landscape) {
+  .chat__control-button {
+    height: 4rem;
+    width: 4rem;
+  }
+}
 .chat__body {
   position: absolute;
   width: 34rem;
   height: 56rem;
-  bottom: 3rem;
-  left: 3rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
   background-color: #35434e;
   border-radius: 5px;
   box-shadow: 0 0 10px black;
@@ -70,6 +76,13 @@ p {
 }
 .chat__body_state_closed {
   transform: scale(0);
+}
+@media (orientation: landscape) {
+  .chat__body {
+    height: 17rem;
+    width: 40rem;
+    font-size: 2rem;
+  }
 }
 
 .content {
@@ -95,6 +108,11 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media (orientation: landscape) {
+  .header {
+    height: 4rem;
+  }
 }
 .header__navigation {
   display: flex;
@@ -129,6 +147,11 @@ p {
 .header__button_type_menu {
   background-image: url('../images/menu-icon.png');
 }
+@media (orientation: landscape) {
+  .header__button {
+    width: 4rem;
+  }
+}
 
 .main {
   height: 100%;
@@ -142,6 +165,11 @@ p {
   display: flex;
   justify-content: start;
 }
+@media (orientation: landscape) {
+  .main__body {
+    margin: 4rem auto 0;
+  }
+}
 .main__image-outer {
   position: relative;
   width: 10rem;
@@ -149,6 +177,11 @@ p {
   margin-right: 2rem;
   flex-shrink: 0;
   border-radius: 5px;
+}
+@media (orientation: landscape) {
+  .main__image-outer {
+    min-height: 10rem;
+  }
 }
 .main__image {
   position: absolute;
@@ -165,12 +198,22 @@ p {
   text-decoration: underline;
   color: white;
 }
+@media (orientation: landscape) {
+  .main__major-title {
+    font-size: 3rem;
+  }
+}
 .main__minor-title {
   margin-top: 2rem;
   font-size: 2.75rem;
   color: white;
   border-left: 0.2rem solid white;
   padding-left: 0.5rem;
+}
+@media (orientation: landscape) {
+  .main__minor-title {
+    font-size: 2.5rem;
+  }
 }
 
 .menu {
@@ -186,8 +229,19 @@ p {
 .menu_state_open {
   margin-right: 0;
 }
+@media (orientation: landscape) {
+  .menu_state_open {
+    box-shadow: 0 0 10px black;
+    width: 25rem;
+  }
+}
 .menu_state_hidden {
   margin-right: -100%;
+}
+@media (orientation: landscape) {
+  .menu {
+    width: 25rem;
+  }
 }
 .menu__header {
   flex-grow: 0;
@@ -199,9 +253,20 @@ p {
   display: flex;
   justify-content: space-between;
 }
+@media (orientation: landscape) {
+  .menu__header {
+    height: 4rem;
+    padding: 0.75rem;
+  }
+}
 .menu__header-title {
   color: white;
   font-size: 4rem;
+}
+@media (orientation: landscape) {
+  .menu__header-title {
+    font-size: 2.5rem;
+  }
 }
 .menu__close-button {
   width: 4rem;
@@ -214,6 +279,12 @@ p {
   background-position: center;
   transition: transform 0.3s;
   cursor: pointer;
+}
+@media (orientation: landscape) {
+  .menu__close-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .menu__body {
   height: 100%;
@@ -230,11 +301,22 @@ p {
 .menu__group:last-child {
   padding-bottom: 1rem;
 }
+@media (orientation: landscape) {
+  .menu__group {
+    margin-top: 1rem;
+  }
+}
 .menu__group-title {
   color: white;
   font-size: 3.25rem;
   margin: auto 1.5rem;
   text-decoration: underline;
+}
+@media (orientation: landscape) {
+  .menu__group-title {
+    font-size: 1.5rem;
+    margin: auto 0.75rem;
+  }
 }
 .menu__element {
   margin: 2rem 1.5rem 0;
@@ -251,6 +333,16 @@ p {
 }
 .menu__element ~ .menu__element {
   margin-top: 2rem;
+}
+@media (orientation: landscape) {
+  .menu__element ~ .menu__element {
+    margin: 0.75rem 0.75rem;
+  }
+}
+@media (orientation: landscape) {
+  .menu__element {
+    margin: 0.75rem 0.75rem;
+  }
 }
 .menu__element-link {
   position: absolute;
