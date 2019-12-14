@@ -1,7 +1,7 @@
 .chat {
   position: fixed;
-  left: 3rem;
-  bottom: 3rem;
+  left: 1.5rem;
+  bottom: 1.5rem;
   z-index: 100;
 
   &__control-button {
@@ -24,14 +24,19 @@
         transform: rotate(0deg);
       }
     }
+
+    @media (orientation:landscape) {
+      height: 4rem;
+      width: 4rem;
+    }
   }
 
   &__body {
     position: absolute;
     width: 34rem;
     height: 56rem;
-    bottom: 3rem;
-    left: 3rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
     background-color: #35434e;
     border-radius: 5px;
     box-shadow: 0 0 10px black;
@@ -49,6 +54,12 @@
       &_closed {
         transform: scale(0);
       }
+    }
+
+    @media (orientation:landscape) {
+      height: 17rem;
+      width: 40rem;
+      font-size: 2rem;
     }
   }
 }

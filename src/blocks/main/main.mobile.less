@@ -9,6 +9,10 @@
     margin: 8rem auto 0;
     display: flex;
     justify-content: start;
+
+    @media (orientation:landscape) {
+      margin: 4rem auto 0;
+    }
   }
 
   &__image-outer {
@@ -18,6 +22,11 @@
     margin-right: 2rem;
     flex-shrink: 0;
     border-radius: 5px;
+
+
+    @media (orientation:landscape) {
+      min-height: 10rem;
+    }
   }
 
   &__image {
@@ -36,6 +45,10 @@
     font-size: 4rem;
     text-decoration: underline;
     color: white;
+
+    @media (orientation:landscape) {
+      font-size: 3rem;
+    }
   }
 
   &__minor-title {
@@ -44,5 +57,9 @@
     color: white;
     border-left: .2rem solid white;
     padding-left: .5rem;
+
+    @media (orientation:landscape) {
+      font-size: 2.5rem;
+    }
   }
 }

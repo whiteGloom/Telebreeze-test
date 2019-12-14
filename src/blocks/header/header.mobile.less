@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
 
+  @media (orientation:landscape) {
+    height: 4rem;
+  }
+
   &__navigation {
     display: flex;
     width: 100%;
@@ -42,6 +46,10 @@
       &_menu {
         background-image: url('../images/menu-icon.png');
       }
+    }
+
+    @media (orientation:landscape) {
+      width: 4rem;
     }
   }
 }

@@ -17,6 +17,10 @@
     }
   }
 
+  @media (orientation:landscape) {
+    width: 25rem;
+  }
+
   &__header {
     flex-grow: 0;
     height: 7rem;
@@ -26,11 +30,20 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+
+    @media (orientation:landscape) {
+      height: 4rem;
+      padding: 0.75rem;
+    }
   }
 
   &__header-title {
     color: white;
     font-size: 4rem;
+
+    @media (orientation:landscape) {
+      font-size: 2.5rem;
+    }
   }
 
   &__close-button {
@@ -44,6 +57,11 @@
     background-position: center;
     transition: transform .3s;
     cursor: pointer;
+
+    @media (orientation:landscape) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 
   &__body {
@@ -63,6 +81,11 @@
     &:last-child {
       padding-bottom: 1rem;
     }
+
+
+    @media (orientation:landscape) {
+      margin-top: 1rem;
+    }
   }
 
   &__group-title {
@@ -70,6 +93,11 @@
     font-size: 3.25rem;
     margin: auto 1.5rem;
     text-decoration: underline;
+
+    @media (orientation:landscape) {
+      font-size: 1.5rem;
+      margin: auto 0.75rem;
+    }
   }
 
   &__element {
@@ -90,6 +118,14 @@
 
     & ~ & {
       margin-top: 2rem;
+
+      @media (orientation:landscape) {
+        margin: .75rem 0.75rem;
+      }
+    }
+
+    @media (orientation:landscape) {
+      margin: .75rem 0.75rem;
     }
   }
 
