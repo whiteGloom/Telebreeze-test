@@ -6,8 +6,6 @@ class Menu {
     this.visibility = visibility;
 
     this._init();
-    this._addListeners();
-    this._applyVisibility();
   }
 
   _applyVisibility() {
@@ -29,6 +27,9 @@ class Menu {
     [this.body] = this.menu.getElementsByClassName('menu__body');
     [this.closeButton] = this.menu.getElementsByClassName('menu__close-button');
     const smoothScroll = new SmoothScroll(this.body);
+
+    this._addListeners();
+    this._applyVisibility();
   }
 
   _addListeners() {

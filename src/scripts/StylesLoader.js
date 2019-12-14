@@ -12,19 +12,10 @@ class StylesLoader {
   }
 
   _init() {
-    this.stylesNormal = this._makeStyleNode('./static/styles/stylesNormal.css');
-    this.stylesMobile = this._makeStyleNode('./static/styles/stylesMobile.css');
-    this.stylesTablet = this._makeStyleNode('./static/styles/stylesTablet.css');
+    this.stylesNormal = StylesLoader.makeStyleNode('./static/styles/stylesNormal.css');
+    this.stylesMobile = StylesLoader.makeStyleNode('./static/styles/stylesMobile.css');
+    this.stylesTablet = StylesLoader.makeStyleNode('./static/styles/stylesTablet.css');
     this._loadStyles();
-  }
-
-  _makeStyleNode(url) {
-    const node = document.createElement('link');
-    node.rel = 'stylesheet';
-    node.type = 'text/css';
-    node.href = url;
-
-    return node;
   }
 
   _loadStyles() {
@@ -32,10 +23,10 @@ class StylesLoader {
     this.stylesMobile.remove();
     this.stylesTablet.remove();
 
-    if(!this.mobileDetect.phone() && !this.mobileDetect.tablet()) {
+    if (!this.mobileDetect.phone() && !this.mobileDetect.tablet()) {
       console.log('This is a pc! Used agent: ', window.navigator.userAgent);
       document.head.appendChild(this.stylesNormal);
-    };
+    }
 
     if (this.mobileDetect.phone()) {
       console.log('This is a phone! Used agent: ', window.navigator.userAgent);
@@ -46,6 +37,15 @@ class StylesLoader {
       console.log('This is a tablet! Used agent: ', window.navigator.userAgent);
       document.head.appendChild(this.stylesTablet);
     }
+  }
+
+  static makeStyleNode(url) {
+    const node = document.createElement('link');
+    node.rel = 'stylesheet';
+    node.type = 'text/css';
+    node.href = url;
+
+    return node;
   }
 }
 

@@ -3,8 +3,6 @@ class Chat {
     this.state = state;
 
     this._init();
-    this._addListeners();
-    this._applyVisibility();
   }
 
   _applyElementVisibility(element) {
@@ -30,6 +28,9 @@ class Chat {
     [this.chat] = document.getElementsByClassName('chat');
     [this.controlButton] = this.chat.getElementsByClassName('chat__control-button');
     [this.body] = this.chat.getElementsByClassName('chat__body');
+
+    this._addListeners();
+    this._applyVisibility();
   }
 
   _addListeners() {
