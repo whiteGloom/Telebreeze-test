@@ -1,3 +1,6 @@
+html {
+  font-size: 12pt;
+}
 html,
 body {
   height: 100%;
@@ -19,16 +22,18 @@ p {
 
 .chat {
   position: fixed;
-  left: 2rem;
-  bottom: 2rem;
+  left: 2.5rem;
+  bottom: 2.5rem;
+  z-index: 100;
 }
 .chat__control-button {
   position: relative;
-  height: 4rem;
-  width: 4rem;
+  height: 5rem;
+  width: 5rem;
   background-color: #ff0048;
   background-image: url('../images/chat-icon.png');
   background-position: center;
+  background-size: cover;
   border-radius: 50%;
   transition: transform 0.3s;
   z-index: 101;
@@ -39,25 +44,21 @@ p {
 .chat__control-button_state_closed {
   transform: rotate(0deg);
 }
-.chat__control-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
 .chat__body {
   position: absolute;
-  width: 15rem;
-  height: 20rem;
-  bottom: 2rem;
-  left: 2rem;
+  width: 30rem;
+  height: 37rem;
+  bottom: 2.5rem;
+  left: 2.5rem;
   background-color: #35434e;
   border-radius: 5px;
   box-shadow: 0 0 10px black;
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 2.5rem;
   color: white;
   z-index: 100;
   transition: transform 0.3s;
-  transform-origin: 0 20rem;
+  transform-origin: 0 37rem;
 }
 .chat__body_state_open {
   transform: scale(1);
@@ -85,7 +86,7 @@ p {
 }
 
 .header {
-  height: 4rem;
+  height: 6rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -97,19 +98,19 @@ p {
 }
 .header__button {
   height: 100%;
-  width: 4rem;
+  width: 6rem;
   display: block;
   padding: 0;
   cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .header__button_state_active {
   background-color: #f9f9f9;
 }
 .header__button_state_inactive {
   background-color: transparent;
-}
-.header__button:hover {
-  background-color: #e3e3e3;
 }
 .header__button_type_tablet {
   background-image: url('../images/tablet-icon.png');
@@ -155,13 +156,13 @@ p {
   flex-shrink: 1;
 }
 .main__major-title {
-  font-size: 5rem;
+  font-size: 4rem;
   text-decoration: underline;
   color: white;
 }
 .main__minor-title {
   margin-top: 2rem;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   color: white;
   border-left: 0.2rem solid white;
   padding-left: 0.5rem;
@@ -171,25 +172,25 @@ p {
   display: flex;
   position: fixed;
   height: 100%;
-  width: 20rem;
+  width: 24rem;
   right: 0;
   flex-direction: column;
   transition: margin-right 0.4s;
-  overflow-y: scroll;
-  z-index: 100;
+  z-index: 150;
 }
 .menu_state_open {
   margin-right: 0rem;
   box-shadow: 0 0 10px black;
 }
 .menu_state_hidden {
-  margin-right: -20rem;
+  margin-right: -24rem;
 }
 .menu__header {
   flex-grow: 0;
-  height: 4rem;
+  height: 6rem;
+  flex-shrink: 0;
   background-color: #252E35;
-  padding: 1rem;
+  padding: 2rem;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -201,15 +202,18 @@ p {
 .menu__close-button {
   width: 2rem;
   height: 2rem;
+  padding: 0;
+  background-color: #344049;
+  border-radius: 50%;
   background-image: url('../images/menu-close-icon.png');
   background-size: cover;
+  background-position: center;
   transition: transform 0.3s;
   cursor: pointer;
 }
-.menu__close-button:hover {
-  transform: scale(1.1);
-}
 .menu__body {
+  height: 100%;
+  overflow-y: scroll;
   flex-grow: 1;
   background-color: #35434E;
 }
@@ -225,13 +229,11 @@ p {
 .menu__group-title {
   color: white;
   font-size: 1.5rem;
-  width: 85%;
-  margin: auto;
+  margin: auto 1rem;
   text-decoration: underline;
 }
 .menu__element {
-  width: 85%;
-  margin: 0.7rem auto 0;
+  margin: 0.7rem 1rem 0;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
@@ -245,10 +247,6 @@ p {
 }
 .menu__element ~ .menu__element {
   margin-top: 1.5rem;
-}
-.menu__element:hover {
-  transform: scale(1.05);
-  box-sizing: border-box;
 }
 .menu__element-link {
   position: absolute;

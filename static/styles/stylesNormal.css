@@ -1,3 +1,26 @@
+html {
+  font-size: 12pt;
+}
+@media screen and (max-width: 1170px) {
+  html {
+    font-size: 10pt;
+  }
+}
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 8pt;
+  }
+}
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 7pt;
+  }
+}
+@media screen and (max-width: 680px) {
+  html {
+    font-size: 6pt;
+  }
+}
 html,
 body {
   height: 100%;
@@ -21,6 +44,7 @@ p {
   position: fixed;
   left: 2rem;
   bottom: 2rem;
+  z-index: 100;
 }
 .chat__control-button {
   position: relative;
@@ -30,6 +54,7 @@ p {
   background-image: url('../images/chat-icon.png');
   background-position: center;
   border-radius: 50%;
+  background-size: cover;
   transition: transform 0.3s;
   z-index: 101;
 }
@@ -101,6 +126,9 @@ p {
   display: block;
   padding: 0;
   cursor: pointer;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 .header__button_state_active {
   background-color: #f9f9f9;
@@ -175,8 +203,7 @@ p {
   right: 0;
   flex-direction: column;
   transition: margin-right 0.4s;
-  overflow-y: scroll;
-  z-index: 100;
+  z-index: 150;
 }
 .menu_state_open {
   margin-right: 0rem;
@@ -188,6 +215,7 @@ p {
 .menu__header {
   flex-grow: 0;
   height: 4rem;
+  flex-shrink: 0;
   background-color: #252E35;
   padding: 1rem;
   box-sizing: border-box;
@@ -201,8 +229,12 @@ p {
 .menu__close-button {
   width: 2rem;
   height: 2rem;
+  background-color: #344049;
+  border-radius: 50%;
+  padding: 0;
   background-image: url('../images/menu-close-icon.png');
   background-size: cover;
+  background-position: center;
   transition: transform 0.3s;
   cursor: pointer;
 }
@@ -210,6 +242,8 @@ p {
   transform: scale(1.1);
 }
 .menu__body {
+  height: 100%;
+  overflow-y: scroll;
   flex-grow: 1;
   background-color: #35434E;
 }
@@ -225,13 +259,11 @@ p {
 .menu__group-title {
   color: white;
   font-size: 1.5rem;
-  width: 85%;
-  margin: auto;
+  margin: auto 1rem;
   text-decoration: underline;
 }
 .menu__element {
-  width: 85%;
-  margin: 0.7rem auto 0;
+  margin: 0.7rem 1rem 0;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
