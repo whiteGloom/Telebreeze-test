@@ -12,6 +12,59 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.chat {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+}
+.chat__control-button {
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+  background-color: #ff0048;
+  background-image: url('../images/chat-icon.png');
+  background-position: center;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  z-index: 101;
+}
+.chat__control-button_state_open {
+  transform: rotate(45deg);
+}
+.chat__control-button_state_closed {
+  transform: rotate(0deg);
+}
+.chat__control-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.chat__body {
+  position: absolute;
+  width: 15rem;
+  height: 20rem;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: #35434e;
+  border-radius: 5px;
+  box-shadow: 0 0 10px black;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  z-index: 100;
+  transition: transform 0.3s;
+  transform-origin: 0 20rem;
+}
+.chat__body_state_open {
+  transform: scale(1);
+}
+.chat__body_state_closed {
+  transform: scale(0);
+}
 
 .content {
   background-color: transparent;
@@ -123,10 +176,11 @@ body {
   flex-direction: column;
   transition: margin-right 0.4s;
   overflow-y: scroll;
-  z-index: 1000;
+  z-index: 100;
 }
 .menu_state_open {
   margin-right: 0rem;
+  box-shadow: 0 0 10px black;
 }
 .menu_state_hidden {
   margin-right: -20rem;
@@ -170,6 +224,7 @@ body {
   font-size: 1.5rem;
   width: 85%;
   margin: auto;
+  text-decoration: underline;
 }
 .menu__element {
   width: 85%;
