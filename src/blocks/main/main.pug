@@ -3,8 +3,8 @@ mixin main(options = {})
         const { majorTitle = '', minorTitle = '', imageSrc = '', imageAlt = 'alt' } = options;
     section.main
         .main__body
-            .main__imageOuter
+            .main__image-outer
                 img.main__image(src=imageSrc alt=imageAlt)
             .main__titles
-                .main__majorTitle= majorTitle
-                .main__minorTitle= minorTitle
+                .main__major-title= majorTitle
+                .main__minor-title= minorTitle
