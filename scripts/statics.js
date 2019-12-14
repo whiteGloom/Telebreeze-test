@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./chat/images/chat-icon.png\": \"./src/blocks/chat/images/chat-icon.png\",\n\t\"./header/images/menu-icon.png\": \"./src/blocks/header/images/menu-icon.png\",\n\t\"./header/images/pc-icon.png\": \"./src/blocks/header/images/pc-icon.png\",\n\t\"./header/images/phone-icon.png\": \"./src/blocks/header/images/phone-icon.png\",\n\t\"./header/images/tablet-icon.png\": \"./src/blocks/header/images/tablet-icon.png\",\n\t\"./menu/images/close-icon.png\": \"./src/blocks/menu/images/close-icon.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/blocks sync recursive \\\\.(jpe?g|gif|png|svg|ico)\";\n\n//# sourceURL=webpack:///./src/blocks_sync_\\.(jpe?");
+eval("var map = {\n\t\"./chat/images/chat-icon.png\": \"./src/blocks/chat/images/chat-icon.png\",\n\t\"./header/images/menu-icon.png\": \"./src/blocks/header/images/menu-icon.png\",\n\t\"./header/images/pc-icon.png\": \"./src/blocks/header/images/pc-icon.png\",\n\t\"./header/images/phone-icon.png\": \"./src/blocks/header/images/phone-icon.png\",\n\t\"./header/images/tablet-icon.png\": \"./src/blocks/header/images/tablet-icon.png\",\n\t\"./menu/images/menu-close-icon.png\": \"./src/blocks/menu/images/menu-close-icon.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/blocks sync recursive \\\\.(jpe?g|gif|png|svg|ico)\";\n\n//# sourceURL=webpack:///./src/blocks_sync_\\.(jpe?");
 
 /***/ }),
 
@@ -212,15 +212,15 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/blocks/menu/images/close-icon.png":
-/*!***********************************************!*\
-  !*** ./src/blocks/menu/images/close-icon.png ***!
-  \***********************************************/
+/***/ "./src/blocks/menu/images/menu-close-icon.png":
+/*!****************************************************!*\
+  !*** ./src/blocks/menu/images/menu-close-icon.png ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"static/images/close-icon.png\");\n\n//# sourceURL=webpack:///./src/blocks/menu/images/close-icon.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"static/images/menu-close-icon.png\");\n\n//# sourceURL=webpack:///./src/blocks/menu/images/menu-close-icon.png?");
 
 /***/ }),
 

@@ -201,7 +201,7 @@ p {
 .menu__close-button {
   width: 2rem;
   height: 2rem;
-  background-image: url('/static/images/close-icon.png');
+  background-image: url('../images/menu-close-icon.png');
   background-size: cover;
   transition: transform 0.3s;
   cursor: pointer;
