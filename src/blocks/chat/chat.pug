@@ -1,6 +1,7 @@
-mixin chat()
+mixin chat(options = {})
+    - const { texts = [] } = options;
     .chat
         .chat__control-button.chat__control-button_state_closed
         .chat__body.chat__body_state_closed
-            p Здесь может быть чат...
-            p А может и не быть.
+            for text in texts
+                p= text

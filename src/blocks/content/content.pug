@@ -4,10 +4,10 @@ include ../header/header
 include ../chat/chat
 
 mixin content(options = {})
-    - const { mainData = {}, menuData = {} } = options;
+    - const { mainData = {}, menuData = {}, chatData = {} } = options;
     .content
         +menu(menuData)
-        +chat
+        +chat(chatData)
         .content__header
             +header
         main.content__body

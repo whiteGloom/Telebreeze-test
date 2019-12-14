@@ -4,6 +4,12 @@
     "minorTitle": "We are always glad to see you!",
     "imageSrc": "./static/images/some3.jpg"
   },
+  "chatData": {
+    "texts": [
+      "Здесь может быть чат...",
+      "А может и не быть."
+    ]
+  },
   "menuData": {
     "title": "Blocks",
     "groups": [
