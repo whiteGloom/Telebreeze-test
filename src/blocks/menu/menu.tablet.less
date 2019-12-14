@@ -2,12 +2,11 @@
   display: flex;
   position: fixed;
   height: 100%;
-  width: 20rem;
+  width: 24rem;
   right: 0;
   flex-direction: column;
   transition: margin-right .4s;
-  overflow-y: scroll;
-  z-index: 100;
+  z-index: 150;
 
   &_state {
     &_open {
@@ -15,15 +14,16 @@
       box-shadow: 0 0 10px black
     }
     &_hidden {
-      margin-right: -20rem;
+      margin-right: -24rem;
     }
   }
 
   &__header {
     flex-grow: 0;
-    height: 4rem;
+    height: 6rem;
+    flex-shrink: 0;
     background-color: #252E35;
-    padding: 1rem;
+    padding: 2rem;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -37,17 +37,19 @@
   &__close-button {
     width: 2rem;
     height: 2rem;
+    padding: 0;
+    background-color: #344049;
+    border-radius: 50%;
     background-image: url('../images/menu-close-icon.png');
     background-size: cover;
+    background-position: center;
     transition: transform .3s;
     cursor: pointer;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   &__body {
+    height: 100%;
+    overflow-y: scroll;
     flex-grow: 1;
     background-color: #35434E;
   }
@@ -67,14 +69,12 @@
   &__group-title {
     color: white;
     font-size: 1.5rem;
-    width: 85%;
-    margin: auto;
+    margin: auto 1rem;
     text-decoration: underline;
   }
 
   &__element {
-    width: 85%;
-    margin: .7rem auto 0;
+    margin: .7rem 1rem 0;
     border-radius: 4px;
     position: relative;
     cursor: pointer;
@@ -91,11 +91,6 @@
 
     & ~ & {
       margin-top: 1.5rem;
-    }
-
-    &:hover {
-      transform: scale(1.05);
-      box-sizing: border-box;
     }
   }
 

@@ -1,5 +1,5 @@
 .header {
-  height: 4rem;
+  height: 7rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -12,10 +12,13 @@
 
   &__button {
     height: 100%;
-    width: 4rem;
+    width: 7rem;
     display: block;
     padding: 0;
     cursor: pointer;
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 
     &_state {
       &_active {
@@ -24,10 +27,6 @@
       &_inactive {
         background-color: transparent;
       }
-    }
-
-    &:hover {
-      background-color: #e3e3e3;
     }
 
     &_type {

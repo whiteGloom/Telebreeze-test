@@ -26,8 +26,9 @@ class Menu {
 
   _init() {
     [this.menu] = document.getElementsByClassName('menu');
+    [this.body] = this.menu.getElementsByClassName('menu__body');
     [this.closeButton] = this.menu.getElementsByClassName('menu__close-button');
-    const smoothScroll = new SmoothScroll(this.menu);
+    const smoothScroll = new SmoothScroll(this.body);
   }
 
   _addListeners() {

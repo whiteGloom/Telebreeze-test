@@ -6,8 +6,7 @@
   right: 0;
   flex-direction: column;
   transition: margin-right .4s;
-  overflow-y: scroll;
-  z-index: 100;
+  z-index: 150;
 
   &_state {
     &_open {
@@ -22,6 +21,7 @@
   &__header {
     flex-grow: 0;
     height: 4rem;
+    flex-shrink: 0;
     background-color: #252E35;
     padding: 1rem;
     box-sizing: border-box;
@@ -37,8 +37,12 @@
   &__close-button {
     width: 2rem;
     height: 2rem;
+    background-color: #344049;
+    border-radius: 50%;
+    padding: 0;
     background-image: url('../images/menu-close-icon.png');
     background-size: cover;
+    background-position: center;
     transition: transform .3s;
     cursor: pointer;
 
@@ -48,6 +52,8 @@
   }
 
   &__body {
+    height: 100%;
+    overflow-y: scroll;
     flex-grow: 1;
     background-color: #35434E;
   }
@@ -67,14 +73,12 @@
   &__group-title {
     color: white;
     font-size: 1.5rem;
-    width: 85%;
-    margin: auto;
+    margin: auto 1rem;
     text-decoration: underline;
   }
 
   &__element {
-    width: 85%;
-    margin: .7rem auto 0;
+    margin: .7rem 1rem 0;
     border-radius: 4px;
     position: relative;
     cursor: pointer;
