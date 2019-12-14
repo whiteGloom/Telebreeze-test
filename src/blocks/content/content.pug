@@ -1,11 +1,13 @@
 include ../menu/menu
 include ../main/main
 include ../header/header
+include ../chat/chat
 
 mixin content(options = {})
     - const { mainData = {}, menuData = {} } = options;
     .content
         +menu(menuData)
+        +chat
         .content__header
             +header
         main.content__body

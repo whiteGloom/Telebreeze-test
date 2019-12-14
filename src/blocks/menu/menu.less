@@ -7,11 +7,12 @@
   flex-direction: column;
   transition: margin-right .4s;
   overflow-y: scroll;
-  z-index: 1000;
+  z-index: 100;
 
   &_state {
     &_open {
       margin-right: 0rem;
+      box-shadow: 0 0 10px black
     }
     &_hidden {
       margin-right: -20rem;
@@ -64,6 +65,7 @@
     font-size: 1.5rem;
     width: 85%;
     margin: auto;
+    text-decoration: underline;
   }
 
   &__element {
