@@ -86,6 +86,29 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/file-loader/dist/cjs.js?name=static/favicons/[name].[ext]!./src/static/favicons/favicon.ico":
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=static/favicons/[name].[ext]!./src/static/favicons/favicon.ico ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"static/favicons/favicon.ico\");\n\n//# sourceURL=webpack:///./src/static/favicons/favicon.ico?./node_modules/file-loader/dist/cjs.js?name=static/favicons/%5Bname%5D.%5Bext%5D");
+
+/***/ }),
+
+/***/ "./src sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=static/favicons/[name].[ext]!./ \\/static\\/favicons\\/.+\\.(svg|png|ico|xml)$":
+/*!***************************************************************************************************************************************!*\
+  !*** ./src sync !./node_modules/file-loader/dist/cjs.js?name=static/favicons/[name].[ext] \/static\/favicons\/.+\.(svg|png|ico|xml)$ ***!
+  \***************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./static/favicons/favicon.ico\": \"./node_modules/file-loader/dist/cjs.js?name=static/favicons/[name].[ext]!./src/static/favicons/favicon.ico\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=static/favicons/[name].[ext]!./ \\\\/static\\\\/favicons\\\\/.+\\\\.(svg|png|ico|xml)$\";\n\n//# sourceURL=webpack:///./node_modules/file-loader/dist/cjs.js?./src_sync_");
+
+/***/ }),
+
 /***/ "./src/blocks sync recursive \\.(jpe?g|gif|png|svg|ico)":
 /*!***************************************************!*\
   !*** ./src/blocks sync \.(jpe?g|gif|png|svg|ico) ***!
@@ -169,6 +192,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
+/***/ "./src/favicons.js":
+/*!*************************!*\
+  !*** ./src/favicons.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var faviconsContext = __webpack_require__(\"./src sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=static/favicons/[name].[ext]!./ \\\\/static\\\\/favicons\\\\/.+\\\\.(svg|png|ico|xml)$\");\n\nfaviconsContext.keys().forEach(faviconsContext);\n\n//# sourceURL=webpack:///./src/favicons.js?");
+
+/***/ }),
+
 /***/ "./src/static/images sync recursive \\.(jpe?g|gif|png|svg|ico)":
 /*!**********************************************************!*\
   !*** ./src/static/images sync \.(jpe?g|gif|png|svg|ico) ***!
@@ -232,10 +266,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /*!************************!*\
   !*** ./src/statics.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var cache = {};\n\nfunction importAll(r) {\n  r.keys().forEach(function (key) {\n    cache[key] = r(key);\n  });\n}\n\nimportAll(__webpack_require__(\"./src/blocks sync recursive \\\\.(jpe?g|gif|png|svg|ico)\")); // images\n\nimportAll(__webpack_require__(\"./src/static/images sync recursive \\\\.(jpe?g|gif|png|svg|ico)\")); // images\n\n//# sourceURL=webpack:///./src/statics.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _favicons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./favicons */ \"./src/favicons.js\");\n/* harmony import */ var _favicons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_favicons__WEBPACK_IMPORTED_MODULE_0__);\n\nvar cache = {};\n\nfunction importAll(r) {\n  r.keys().forEach(function (key) {\n    cache[key] = r(key);\n  });\n}\n\nimportAll(__webpack_require__(\"./src/blocks sync recursive \\\\.(jpe?g|gif|png|svg|ico)\")); // images\n\nimportAll(__webpack_require__(\"./src/static/images sync recursive \\\\.(jpe?g|gif|png|svg|ico)\")); // images\n\n//# sourceURL=webpack:///./src/statics.js?");
 
 /***/ })
 
