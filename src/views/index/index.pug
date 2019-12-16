@@ -5,6 +5,10 @@ html
     head
         meta(charset="utf-8")
         title Test main page
-        script(src="./scripts/index.js")
+        meta(name="viewport" content="initial-scale=1.0, width=device-width")
+        meta(name="description" content="Ответ на тестовое задание")
+        meta(name="keywords" content="test")
+        link(rel="icon", type="image/png", sizes="32x32", href="static/favicons/favicon.ico")
     body
         +content(self.htmlWebpackPlugin.options.data)
+        script(src="./scripts/index.js")
